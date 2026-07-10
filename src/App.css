@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 24px 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 12px;
+  padding: 16px 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link:hover {
+  background-color: #e8eefc;
+}
+
+.nav-link.active {
+  background-color: #3b5bdb;
+  color: #fff;
+}
+
+h1 {
+  color: #222;
+  margin-bottom: 24px;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.student-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-3px);
+}
+
+.student-card h3 {
+  margin: 0 0 6px;
+  color: #222;
+}
+
+.student-card p {
+  margin: 0 0 14px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.15s;
+}
+
+.btn-add {
+  background-color: #3b5bdb;
+  color: #fff;
+}
+
+.btn-add:hover {
+  opacity: 0.9;
+}
+
+.btn-added {
+  background-color: #40c057;
+  color: #fff;
+  cursor: default;
+}
+
+.btn-remove {
+  background-color: #e03131;
+  color: #fff;
+}
+
+.btn-remove:hover {
+  opacity: 0.9;
+}
+
+.empty-message {
+  color: #888;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 40px 0;
 }

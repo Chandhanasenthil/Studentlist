@@ -19,6 +19,7 @@ function StudentListPage() {
           return (
             <div className="student-card" key={student.id}>
               <h3>{student.name}</h3>
+              <p>Roll No: {student.RollNo}</p>
               <button
                 className={favourited ? "btn btn-added" : "btn btn-add"}
                 onClick={() => addFavourite(student)}
